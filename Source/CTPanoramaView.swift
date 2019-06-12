@@ -49,14 +49,14 @@ import ImageIO
     @objc public var panoramaType: CTPanoramaType = .cylindrical {
         didSet {
             createGeometryNode()
-            resetCameraAngles()
+            // resetCameraAngles()
         }
     }
 
     @objc public var controlMethod: CTPanoramaControlMethod = .touch {
         didSet {
             switchControlMethod(to: controlMethod)
-            resetCameraAngles()
+            // resetCameraAngles()
         }
     }
 
