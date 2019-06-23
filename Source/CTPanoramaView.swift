@@ -36,18 +36,21 @@ import ImageIO
 
     @objc public var image: UIImage? {
         didSet {
+            print("CTPanoramaView image didSet")
             panoramaType = panoramaTypeForCurrentImage
         }
     }
 
     @objc public var overlayView: UIView? {
         didSet {
+            print("CTPanoramaView overlayView didSet")
             replace(overlayView: oldValue, with: overlayView)
         }
     }
 
     @objc public var panoramaType: CTPanoramaType = .cylindrical {
         didSet {
+            print("CTPanoramaView panoramaType didSet")
             createGeometryNode()
             // resetCameraAngles()
         }
@@ -55,6 +58,7 @@ import ImageIO
 
     @objc public var controlMethod: CTPanoramaControlMethod = .touch {
         didSet {
+            print("CTPanoramaView controlMethod didSet")
             switchControlMethod(to: controlMethod)
             // resetCameraAngles()
         }
